@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/staticprenda.css">
+    <link rel="icon" href="/icon.png">
+    <title>OakPine - Sistemas de Estacionamento</title>
+</head>
+<body>
+
+    <div class="card">
+		<div class="left">
+			<img class="profile_img" src="https://www.teclasap.com.br/wp-content/uploads/2020/02/valet.jpg" alt="">
+		</div>
+		<div class="right">
+			<h2 class="name">Clientes VIP</h2>
+			<div class="interests">
+				<p class="interests_title">Consulte aqui a quantidade de clientes VIP cadastrados atualmente. </p>
+				<h3>[VIP] -> {{clivip.consultavip}}</h3>
+                <h5>Use o formulário abaixo para <span style="color: red;">APAGAR</span> um cliente VIP do sistema.</h5>
+                <form action="/auth/deletevip" method="POST">
+                    <input type="text" placeholder="PLACA" id="placa" name="placa">
+                    <button type="submit"><p style="color: red;">DELETAR</p></button>
+                </form>
+        <h2><a href="/profile">VOLTAR</a></h2>
+			</div>
+		</div>
+	</div>
+
+        {{#if message}}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
