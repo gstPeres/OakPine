@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Lucida Bright;
+  background: #23232e;
+  height: 8vh;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    margin-top: 7px;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav li a:hover {
+    color: rgb(211, 211, 211);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.avatar-ctn {
+    background-color: orange;
+    text-align: center;
+}
+
+.avatar {
+    width:65%
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.img-fluid {
+    width: 10%;
+    height: 10%;
+}
+
+@use postcss-preset-env {
+    stage: 0;
+  }
+  
+  /* helpers/align.css */
+  
+  .align {
+    display: grid;
+    place-items: center;
+  }
+  
+  /* helpers/grid.css */
+  
+  :root {
+    --gridMaxWidth: 20rem;
+    --gridWidth: 90%;
+  }
+  
+  .grid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--gridMaxWidth);
+    width: var(--gridWidth);
+  }
+  
+  /* layout/base.css */
+  
+  :root {
+    --bodyBackgroundColor: #61646d;
+    --bodyColor: #000;
+    --bodyFontFamily: 'Open Sans';
+    --bodyFontFamilyFallback: sans-serif;
+    --bodyFontSize: .875rem;
+    --bodyFontWeight: 400;
+    --bodyLineHeight: 1.5;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  
+  /* modules/button.css */
+  
+  .button {
+    background-color: var(--searchInputButtonBackgroundColor);
+    color: var(--searchInputButtonColor);
+    font-weight: var(--searchInputButtonFontWeight);
+    padding: var(--searchInputButtonPaddingVertical) var(--searchInputButtonPaddingHorizontal);
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .button:focus,
+  .button:hover {
+    background-color: var(--searchInputButtonHoverBackgroundColor);
+  }
+  
+  /* modules/form.css */
+  
+  ::placeholder {
+    color: #42454e;
+  }
+  
+  input {
+    appearance: none;
+    border: none;
+    font: inherit;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    font-size: 17px;
+  }
+  
+  input[type="search"] {
+    appearance: textfield;
+    box-sizing: content-box;
+  }
+  
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    appearance: none;
+  }
+  
+  input[type="submit"] {
+    cursor: pointer;
+  }
+  
+  .form__field {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    gap: 0.5rem;
+  }
+  
+  .form__input {
+    flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* modules/search.css */
+  
+  :root {
+    --searchBackgroundColor: #000000;
+    --searchBorderRadius: .125rem;
+    --searchFontSize: .75rem;
+    --searchPadding: .5rem;
+  
+    --searchInputBorderRadius: .125rem;
+  
+    --searchInputSearchBackgroundColor: #fff;
+    --searchInputSearchColor: #42454e;
+    --searchInputSearchPaddingHorizontal: .5rem;
+    --searchInputSearchPaddingVertical: .375rem;
+  
+    --searchInputButtonBackgroundColor: #1742ff;
+    --searchInputButtonColor: rgb(238, 255, 0);
+    --searchInputButtonFontWeight: bold;
+    --searchInputButtonPaddingHorizontal: .625rem;
+    --searchInputButtonPaddingVertical: .375rem;
+    --searchInputButtonHoverBackgroundColor: #0c7edb;
+  }
+  
+  .search {
+    background-color: var(--searchBackgroundColor);
+    border-radius: var(--searchBorderRadius);
+    font-size: var(--searchFontSize);
+    padding: var(--searchPadding);
+  }
+  
+  .search input[type="search"],
+  .search input[type="submit"] {
+    border-radius: var(--searchInputBorderRadius);
+  }
+  
+  .search input[type="search"] {
+    background-color: var(--searchInputSearchBackgroundColor);
+    color: var(--searchInputSearchColor);
+    padding: var(--searchInputSearchPaddingVertical) var(--searchInputSearchPaddingHorizontal);
+  }
+
+  .ticket-wrap {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
+  .ticket {
+    display: inline-block;
+    margin: 0 auto;
+    border: 2px solid #9facbc;
+    font-family: "Variable Bahnschrift", "FF DIN", "Franklin Gothic", "Helvetica Neue", sans-serif;
+    font-feature-settings: "kern" 1;
+    background: #fff;
+    margin-top: 100px;
+  }
+  
+  .ticket__header {
+    margin: 0;
+    padding: 1.5em;
+    background: #f4f5f6;
+  }
+  
+  .ticket__co span,
+  .ticket__route span {
+    display: block;
+  }
+  
+  .ticket__co {
+    display: inline-block;
+    position: relative;
+    padding-left: 5em;
+    line-height: 1;
+    color: #5e7186;
+  }
+  
+  .ticket__co-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -2em;
+    left: 0;
+    width: 4em;
+    height: auto;
+  }
+  
+  .ticket__co-name {
+    font-size: 2.5em;
+    font-variation-settings: "wght" 500, "wdth" 75;
+    letter-spacing: -.01em;
+  }
+  
+  .ticket__co-subname {
+    font-variation-settings: "wght" 700;
+    color: #506072;
+  }
+  
+  .ticket__body {
+    padding: 2rem 1.25em 1.25em;
+  }
+  
+  .ticket__route {
+    font-variation-settings: "wght" 300;
+    font-size: 2em;
+    line-height: 1.1;
+  }
+  
+  .ticket__description {
+    margin-top: .5em;
+    font-variation-settings: "wght" 350;
+    font-size: 1.125em;
+    color: #506072;
+  }
+  
+  .ticket__timing {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 2px solid #9facbc;
+    border-bottom: 2px solid #9facbc;
+    text-align: left;
+  }
+  
+  .ticket__timing p {
+    margin: 0 1rem 0 0;
+    padding-right: 1rem;
+    border-right: 2px solid #9facbc;
+    line-height: 1;
+  }
+  
+  .ticket__timing p:last-child {
+    margin: 0;
+    padding: 0;
+    border-right: 0;
+  }
+  
+  .ticket__small-label {
+    display: block;
+    margin-bottom: .5em;
+    font-variation-settings: "wght" 300;
+    font-size: .875em;
+    color: #506072;
+  }
+  
+  .ticket__detail {
+    font-variation-settings: "wght" 700;
+    font-size: 1.25em;
+    color: #424f5e;
+  }
+  
+  .ticket__admit {
+    margin-top: 2rem;
+    font-size: 2.5em;
+    font-variation-settings: "wght" 700, "wdth" 85;
+    line-height: 1;
+    color: #657990;
+  }
+  
+  .ticket__fine-print {
+    margin-top: 1rem;
+    font-variation-settings: "wdth" 75;
+    color: #666;
+  }
+  
+  .ticket__barcode {
+    margin-top: 1.25em;
+    width: 299px;
+    max-width: 100%;
+  }
+  
+  @media (min-width: 36em) {
+    .ticket-wrap {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+  
+    .ticket {
+      margin: 0 auto;
+      transform: rotate(6deg);
+    }
+  
+    .ticket__header {
+      margin: 0;
+      padding: 2em;
+    }
+  
+    .ticket__body {
+      padding: 3rem 2em 2em;
+    }
+  
+    .ticket__detail {
+      font-size: 1.75em;
+    }
+  
+    .ticket__admit {
+      margin-top: 2rem;
+    }
+  }
+  
+  @supports (display: grid) {
+    @media (min-width: 72em) {
+      .ticket-info,
+      .ticket-wrap {
+        align-self: center;
+      }
+  
+      .ticket-wrap {
+        order: 2;
+        margin-bottom: 0;
+      }
+  
+      .ticket-info {
+        order: 1;
+      }
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+
+body {
+    background: url("img2.jpg") no-repeat center center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    height: 100vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* DAQUI PRA BAIXO PROFILE.HBS */
+
+html, body {
+  height: 100%;
+}
+body {
+  display: grid;
+  
+}
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+ }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+ }
+}
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 85, 14);
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+ }
+}
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(https://static.coalize.com.br/assets/base/1bb/91f/73e/pauta-de-reuniao-produtiva.jpg);
+  filter: blur(4px);
+}
+.card:nth-child(2):before {
+  background-image: url(https://www.teclasap.com.br/wp-content/uploads/2020/02/valet.jpg);
+  filter: blur(4px);
+}
+.card:nth-child(3):before {
+  background-image: url(https://www.parebem.com.br/wp-content/uploads/2019/01/redes-de-estacionamento.jpg);
+  filter: blur(4px);
+}
+.card:nth-child(4):before {
+  background-image: url(https://einvestidor.estadao.com.br/wp-content/uploads/sites/715/2020/11/digitaltabletwithstockmarketdatauc94zgh_041120204815.jpg);
+  filter: blur(4px);
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+ }
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+ }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+ }
+  .card:hover, .card:focus-within {
+    align-items: center;
+ }
+  .card:hover:before, .card:focus-within:before {
+    transform: translateY(-4%);
+ }
+  .card:hover:after, .card:focus-within:after {
+    transform: translateY(-50%);
+ }
+  .card:hover .content, .card:focus-within .content {
+    transform: translateY(0);
+ }
+  .card:hover .content > *:not(.title), .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+ }
+  .card:focus-within:before, .card:focus-within:after, .card:focus-within .content, .card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+ }
+}
+
+/* LOGIN */
+
+
+
+/* INICIO PRENDA*/
+
+
+
