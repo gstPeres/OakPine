@@ -56,7 +56,7 @@ exports.login = async (req, res) => {
     }
 }
 
-exports.register = (req, res) => {
+/*exports.register = (req, res) => {
     console.log(req.body);
 
     const { name, email, password, passwordConfirm } = req.body;
@@ -91,7 +91,7 @@ exports.register = (req, res) => {
 
     });
 
-} //ATUALIZADO 01:26
+}*/ //ATUALIZADO 01:26 | Comentado, apenas para demonstrar como foi feito a criação de usuários do tipo Admin.
 
 exports.deletevip = (req, res) => {
     console.log(req.body);
